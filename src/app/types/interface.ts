@@ -13,7 +13,6 @@ export interface Pokemon {
     name: string;
     order: number;
     past_abilities: PastAbility[];
-    past_types: any[];
     species: NamedAPIResource;
     sprites: Sprites;
     stats: Stat[];

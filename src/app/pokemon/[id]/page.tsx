@@ -1,5 +1,6 @@
 import MoveList from '@/app/components/MoveList';
 import { Pokemon } from '@/app/types/interface';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 interface Props {
@@ -29,12 +30,14 @@ export default async function PokemonDetailPage({ params }: Props) {
                 </h1>
 
                 <div className="flex justify-center mb-8">
-                    <img
+                    <Image
                         src={
                             pokemon.sprites.other?.official_artwork?.front_default ??
                             pokemon.sprites.front_default ??
                             ''
                         }
+                        width={56}
+                        height={56}
                         alt={pokemon.name}
                         className="w-56 h-56 object-contain drop-shadow-xl"
                     />
